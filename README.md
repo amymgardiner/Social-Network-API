@@ -25,3 +25,5 @@ which installs the dependencies to the local node_modules folder. By default, np
 Finally, the application will be invoked by using the following command:
 
 `npm start`
+
+A walk-through video is in the assets folder of my repository if you'd like to watch how to test these routes in Insomnia.
