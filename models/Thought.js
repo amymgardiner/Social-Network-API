@@ -1,6 +1,7 @@
 const { Schema, model, Types } = require('mongoose');
 const moment = require('moment');
 
+// users can react to thoughts
 const ReactionSchema = new Schema(
   {
     reactionId: {
@@ -30,6 +31,7 @@ const ReactionSchema = new Schema(
   }
 );
 
+// users can share their thoughts
 const ThoughtSchema = new Schema(
   {
     thoughtText: {
@@ -57,6 +59,7 @@ const ThoughtSchema = new Schema(
   }
 );
 
+// get total count of reactions on retrieval
 ThoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });

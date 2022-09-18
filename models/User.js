@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+// users can share their thoughts, react to friends’ thoughts, and create a friend list
 const UserSchema = new Schema(
   {
     username: {
@@ -35,6 +36,7 @@ const UserSchema = new Schema(
   }
 );
 
+// get total count of friends on retrieval
 UserSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 });
